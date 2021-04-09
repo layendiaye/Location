@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Goo2Goo</title>
+    <style>
+        #afficher
+        {
+            width: 350px;
+            background-color: green;
+            color:white;
+        }
+    </style>
+  </head>
+  <body>
+      
+   <div>
+        <form>
+                <h2>Listes des voitures disponibles</h2>
+                <h3>Selectionnez votre choix</h3>
+                <table>
+                        <tr>
+                                <td>nombre de jours:</td>
+                                <td><input type="number" id="nbj" ></td>
+                            </tr>
+                    <tr>
+                        <td>Marque:</td>
+                        <td><select id="voitures" onchange="caracters();">
+                            <option value="empty">Select</option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Mercedess">Mercedess</option>
+                            <option value="BMW">BMW</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                    <td>Modele:</td>
+                    <td><input type="" name="" id="modele" disabled=""></td><!--pour empecher que l'utilisateur puisse saisir un text-->
+                    </tr>
+                    <tr>
+                    <td>carburant:</td>
+                    <td><input type="" name="" id="energie" disabled=""></td>
+                    </tr>
+                    <tr>
+                    <td>Boite de vitesse: </td>
+                    <td><input type="" name="" id="boite" disabled=""></td>
+                    </tr>
+                    <td>prix par jour: </td>
+                    <td><input type="" name="" id="prix" disabled="">euros</td>
+                    </tr>
+
+                </table>
+                <br>
+                <button type="btn btn-default">Valider</button>
+                <button type="btn btn-default">Annuler</button>
+            </form>
+            <script >
+                function caracters()
+                {
+                var marque=[];
+                var modele=[];
+                var energie=[];
+                var boite=[];
+                var prix=[];
+                marque[0]="Peugeot";
+                modele[0]="508";
+                energie[0]="Diesel";
+                boite[0]="auto";
+                prix[0]="50";
+        
+                marque[1]="Renault";
+                modele[1]="Talisman";
+                energie[1]="Diesel";
+                boite[1]="auto";
+                prix[1]="50"
+        
+                marque[2]="Mercedess";
+                modele[2]="classe C220";
+                energie[2]="Diesel";
+                boite[2]="auto";
+                prix[2]="70";
+        
+                marque[3]="BMW";
+                modele[3]="Serie 4";
+                energie[3]="Diesel";
+                boite[3]="auto";
+                prix[3]="70";
+        
+                var selection=document.getElementById("voitures").value;
+                var jours=document.getElementById("nbj").value;
+                var resultat;
+                for (i=0; i<marque.length ; i++) 
+                {
+                        if (marque[i]==selection && jours!=0) 
+                        {
+                            document.getElementById("modele").value=modele[i];
+                            document.getElementById("energie").value=energie[i];
+                            document.getElementById("boite").value=boite[i];
+                            document.getElementById("prix").value=prix[i];
+
+                            if(jours>0 && jours<=180)
+                            {
+                                document.getElementById("modele").value=modele[i];
+                                document.getElementById("energie").value=energie[i];
+                                document.getElementById("boite").value=boite[i];
+                                document.getElementById("prix").value=prix[i];
+                                resultat=document.getElementById("nbj").value*
+                                document.getElementById("prix").value;
+                                document.getElementById('afficher').innerHTML="Le montant à payer est de: "+resultat+" euros";
+                            }
+                            else if(jours>180){
+                                document.getElementById("modele").value=modele[i];
+                                document.getElementById("energie").value=energie[i];
+                                document.getElementById("boite").value=boite[i];
+                                document.getElementById("prix").value=prix[i];
+                                montant=document.getElementById("nbj").value*
+                                document.getElementById("prix").value; 
+                                remise=montant*10/100;
+                                resultat=montant-remise;
+                                document.getElementById('afficher').innerHTML="Vous bénéficiez pour cett une remie de: "+
+                                " 10%"+"<br>"+"le montant à payer est de: "+resultat+" euros";  
+                            } 
+                            else
+                            {
+                                document.getElementById("modele").value="";
+                                document.getElementById("energie").value="";
+                                document.getElementById("boite").value="";
+                                document.getElementById("prix").value="";
+                                document.getElementById("nbj").style.backgroundColor="red";
+                                alert("saisissez un minimum de jour");
+                                break;
+                            }
+                    }
+                    else
+                            {
+                                
+                            }
+					
+                }
+            }
+            </script>
+   </div>
+   <div id="afficher">
+        
+              </div>
+  </body>
+</html>

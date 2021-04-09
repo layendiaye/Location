@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulaire d'inscription</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript"></script> 
+    <link rel="stylesheet" href="../css/styleG.css"> 
+</head>
+<body>
+<div class="container-fluid">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only"><!--pour les mal voyant-->Toggle navigation</span>
+				  <span class="icon-bar" ></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				
+			  </div>
+			  <div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				  <li><a href="../index.html">Home</a></li>
+				  <li><a href="contact.html">Contact</a></li>
+				  <li><a href="caracteristic.html">Consulter</a></li>
+				</ul>
+			  </div><!--/.nav-collapse -->
+			</div>
+		  </nav>		
+	
+	<div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+			<h1 id="logo"><span class="text-color">Goo2Goo</span></h1>
+					
+          </div>
+        </div>
+		</div>
+		</div>
+
+	<div class="container">	
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="../images/508-blanc.jpg" class="img-responsive" alt="Peugeot 508">
+			</div>
+			
+			<div class="col-sm-3">
+				<img src="../images/talisman-1.jpg" class="img-responsive" alt="Renault Tamisman">
+			</div>
+
+			<div class="col-sm-3">
+				<img src="../images/serie-5.jpg" class="img-responsive" alt="Bmw Serie 5">
+			</div>
+
+			<div class="col-sm-3">
+				<img src="../images/classe-E.jpg" class="img-responsive" alt="Mercedes classe E">
+			</div>
+		</div>
+	</div>
+<br><br>
+
+<
+	<h1 style="background: grey; text-align:center"> Remplissez le formulaire pour vous inscrire </h1>
+<br><br>
+
+	<form method="post" action="">
+		
+		<fieldset><br>
+			<div class="container">
+ 			<div class="row" id="caracter">
+ 				<div class="col-md-6">
+			<legend style="color: red">Informations Personnels</legend>
+
+			<table>
+			
+			<tr>
+				<td>
+					<p><b><i>Genre:</i></b></p>
+					<input type="radio" name="sexe">Masculin
+					<input type="radio" name="sexe">Feminin
+				</td>
+			</tr>
+
+			<tr>
+			  	<td>
+				    <p><b><i>Nom:</i></b></p>
+				    <input id="name" type="text" name="name" autofocus placeholder="Entrez votre Nom" required>
+			    </td>
+			</tr>
+			
+			<tr>
+				<td>
+					<p><b><i>Prénom:</i></b></p>
+					<input id="prénom" type="text" name="prénom" placeholder="Entrez votre Prénom" required>
+				</td>
+			</tr>
+		
+			<tr>
+				<td>	  
+				    <p><b><i>Date de Naissance:</i></b></p>
+				    
+				    <div>
+					    <label for="birthday"></label>
+					    <input style="width: 100%" type="date" id="birthday" name="birthday" min="" max="" required>
+					  </div>
+					  <div>
+					    
+					  </div> 
+				</td>
+			</tr>
+	
+			<tr>
+				<td>	  
+				    <p><b><i>Lieu de Naissance:</i></b></p>
+				     <select style="width: 100%">
+				     	<option></option>
+				    	<option>France</option>
+				    	<option>Zone EURO</option>
+				    	<option>Hors zone EURO</option>
+				    </select>	
+				</td>
+			</tr>
+		
+			<tr>
+				<td>	  
+				    <p><b><i>Adresse:</i></b></p>
+				    <input id="adresse" type="text" name="Email" value="" placeholder="Entrez votre Adresse" required> 
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>	  
+				    <p><b><i>Code Postal:</i></b></p>
+				    <input id="Code Postal" type="text" name="Code Postal" value="" placeholder="Entrez Code Postal" required> 
+				</td>
+			</tr>
+
+			<tr>
+				<td>	  
+				    <p><b><i>Pays:</i></b></p>
+				    <input id="Pays" type="text" name="Pays" value="" placeholder="Entrez votre Pays" required>
+				    
+				</td>
+			</tr>
+		
+
+			<tr>
+				<td>	  
+				    <p><b><i>E-mail:</i></b></p>
+				    <input id="email" type="Email" name="Email" value="" placeholder="Entrez votre E-mail" required>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>	  
+				    <p><b><i>Tél:</i></b></p>
+				    <input id="number" type="text" name="number" value="" placeholder="Entrez votre Numéro" required>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<p><b><i>Identifiant:</i></b></p>
+      				<input type="text" name="pseudo" id="pseudo" placeholder="Entrez votre pseudo" required>
+      			</td>
+      		</tr>
+
+      		<tr>
+      			<td>
+      				 <p><b><i>Mot de passe:</i></b></p>
+      				 <input type="password" name="password" id="password" placeholder="Entrez password" required>
+      			</td>
+      		</tr>
+					
+       	</table>
+       </div>
+       			<div class="div">
+					<img src="../images/508-blanc.jpg" class="img-responsive">
+					<img src="../images/classe-c.jpg" class="img-responsive">
+					<img src="../images/serie-5.jpg" class="img-responsive">
+					<img src="../images/talisman-1.jpg" class="img-responsive">
+				</div>
+       	</div>
+		</div>
+
+	</fieldset>
+		
+
+		
+	</form>
+
+
+	<br>
+ 		<div class="container">
+ 			<div  class="row" id="caracter">
+		<fieldset>
+		
+			<legend style="color: red">Documents à joindre</legend>
+		
+			<select>
+				<option value=""></option>
+				<option value="KBIS"><b>KBIS</b></option>
+				<option value="Carte profesionnelle"><b>Carte profesionnelle VTC</b></option>
+				<option value="Copie Id"><b>Pièce d'identité</b></option>	
+			</select>
+
+			<input type="file" name="file" value="" required>
+			<br>
+		
+	
+		 <div>
+		 	<button type="button" style="background-color: yellow">Envoyer</button>
+		 	<button type="button" style="background-color: green">Réinitialiser</button>
+		 </div>
+
+		 <br>
+	</fieldset>
+	
+
+
+	
+		<a href="#Top">
+		<button type="button" style="background-color: lightgrey">Back Top</button>
+		</a>
+   	</div>
+   	</div>
+
+	</form>
+<br>
+</div>
+
+<footer>
+	<div class="row">
+		<div class="col-xs-4">
+				<ul>
+					<li><a href="../index.html">Acceuil</a></li>
+					<li><a href="contact.html">Nous contacter</a></li>
+					<li><a href="connexion.html">Louer</a></li>
+				</ul>
+		</div>
+		<div class="col-xs-4">
+			<ul>
+				<li><a href="https://www.facebook.com" target="blank"><img src="images/facebook.png"></a></li>
+				<li><a href="https://www.twitter.com" target="blank"><img src="images/twitter2.png"></a> </li>
+				<li><a href="https://www.linkedin.com" target="blank"><img src="images/Linker.png"></a></li>
+			</ul>
+		</div>
+		<div class="col-xs-4">
+			&copy; Copy Right | ALL rights reserved
+		</div>
+	</div>
+	</footer>
+	
+
+
+</body>
+</html>
